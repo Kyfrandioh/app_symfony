@@ -3,8 +3,10 @@
 namespace App\Controller\Admin;
 
 use App\Entity\Picture;
+use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 use EasyCorp\Bundle\EasyAdminBundle\Field\IdField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\ImageField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextEditorField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 
@@ -15,14 +17,19 @@ class PictureCrudController extends AbstractCrudController
         return Picture::class;
     }
 
-    /*
+    public function configureCrud(Crud $crud): Crud
+    {
+        return $crud->setPageTitle('index', 'Galerie d\'images');
+    }
     public function configureFields(string $pageName): iterable
     {
         return [
-            IdField::new('id'),
-            TextField::new('title'),
-            TextEditorField::new('description'),
+            TextField::new('title', 'Titre (qui s\'affichera au survol de l\'image)'),
+            ImageField::new('image')
+                ->setBasePath('upload/images/home')
+                ->setUploadDir('public/upload/images/home')
+                ->setSortable(false)
         ];
     }
-    */
+
 }

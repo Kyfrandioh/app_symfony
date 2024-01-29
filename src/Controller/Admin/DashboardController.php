@@ -75,6 +75,6 @@ class DashboardController extends AbstractDashboardController
         yield MenuItem::section('Capacité du restaurant');
         yield MenuItem::linkToCrud('Modifier la capacité du restaurant', 'fa-solid fa-pen-to-square', 
         MaxCapacity::class)->setAction(Crud::PAGE_INDEX);
-        // yield MenuItem::linkToCrud('The Label', 'fas fa-list', EntityClass::class);
+        
     }
 }

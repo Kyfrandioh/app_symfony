@@ -16,7 +16,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class EditUserController extends AbstractController
 {
-    #[Route('/editUser/', name: 'app_edit_user', methods: ['POST', 'GET'])]
+    #[Route('/editUser', name: 'app_edit_user', methods: ['POST', 'GET'])]
     public function edit(Request $request, EntityManagerInterface $entityManager,
      UserPasswordHasherInterface $userPasswordHasher): Response
     {
@@ -45,7 +45,7 @@ class EditUserController extends AbstractController
 
         }
 
-        return $this->render('editUser/index.html.twig', [
+        return $this->render('user/editUser.html.twig', [
             'form' => $form->createView(),
             'controller_name' => 'EditUserController'
         ]);

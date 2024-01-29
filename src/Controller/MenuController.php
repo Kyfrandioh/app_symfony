@@ -15,10 +15,10 @@ class MenuController extends AbstractController
     {
 
 
-        return $this->render('menu/menu.html.twig', [
+        return $this->render('menu/index.html.twig', [
             'controller_name' => 'MenuController',
-            'menus' => $menuRepository->findMenu(),
-            'formulas' => $formulaRepository->findFormula()
+            'menus' => $menuRepository->findAll(),
+            'formulas' => $formulaRepository->findAll()
         ]);
     }
 }
