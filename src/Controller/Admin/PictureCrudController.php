@@ -26,9 +26,10 @@ class PictureCrudController extends AbstractCrudController
         return [
             TextField::new('title', 'Titre (qui s\'affichera au survol de l\'image)'),
             ImageField::new('image')
-                ->setBasePath('upload/images/home')
-                ->setUploadDir('public/upload/images/home')
+                ->setBasePath('images/')
+                ->setUploadDir('public/images')
                 ->setSortable(false)
+                ->setUploadedFileNamePattern('[randomhash].[extension]'),
         ];
     }
 

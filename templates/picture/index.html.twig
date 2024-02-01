@@ -4,7 +4,7 @@
         {% for picture in pictures %}
         <div class="carousel-item {% if loop.index ==1 %}active{% endif %}">
             <div id="image">
-            <img src="upload/images/home/{{ picture.image }}" class="d-block img-fluid carousel" alt="{{ picture.title }}">
+            <img src="/images/{{ picture.image }}" class="d-block img-fluid carousel" alt="{{ picture.title }}">
             <div id="image-text">{{ picture.title }}</div>
             </div>
          </div>

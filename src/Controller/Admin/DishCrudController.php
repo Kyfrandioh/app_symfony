@@ -22,13 +22,16 @@ class DishCrudController extends AbstractCrudController
     {
         return $crud->setPageTitle('index', 'Plats');
     }
-    public function configureFields(string $pageName): iterable
+
+    public function configureFields(String $pageName): iterable 
     {
         return [
+            IdField::new('id')->hideOnForm(),
             AssociationField::new('dishCategory', 'categorie'),
             TextField::new('title', 'Nom'),
             TextField::new('description'),
             MoneyField::new('price', 'Prix')->setCurrency('EUR')->setCustomOption('storedAsCents', false)
             ];
     }
+
 }
