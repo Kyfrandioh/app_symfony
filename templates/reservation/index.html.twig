@@ -36,7 +36,7 @@
         <div class="row justify-content-center hidden" id="contact">
             <div class="col-md-4">
                 {{ form_row(reservationForm.guestEmail) }}
-    <button type="submit" class="btn btn-primary btn-lg mt-2">Réserver</button>
+    <button type="submit" class="btn w-100 btn-lg mt-2 btn-primary">Réserver</button>
             </div>
         </div>
         {{ form_end(reservationForm) }}
@@ -44,6 +44,7 @@
 
 {% endblock %}
 {% block javascripts %}
-    {{ encore_entry_script_tags('openingHours') }}
-    {{ encore_entry_script_tags('reservation') }}
+  <script src="{{ ('scripts/openingHours.js') }}"><script> 
+  <script src="{{ ('scripts/reservation.js') }}"><script> 
+     
 {% endblock %}

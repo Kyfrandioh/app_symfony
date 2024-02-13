@@ -36,11 +36,12 @@ class ReservationType extends AbstractType
         ])
         ->add('time', TimeType::class, [
             'label' => 'Heure de la réservation',
-            'attr' => ['class' => 'mt-2'],
+            'attr' => ['class' => 'mt-2 form-control'],
             'required' => 'true',
             'widget' => 'choice',
             'hours' => [12, 13, 19, 20, 21],
             'minutes' => [00, 15, 30, 45]
+            
         ])
         ->add('guestNumber', ChoiceType::class, [
             'label' => 'Nombre de convives',

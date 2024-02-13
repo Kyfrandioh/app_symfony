@@ -38,6 +38,13 @@ class RegistrationController extends AbstractController
             $entityManager->flush();
             // do anything else you need here, like send an email
 
+            $this->addFlash(
+                'success',
+                'Votre inscription s\'est bien dérouler'
+            );
+
+           
+
             return $userAuthenticator->authenticateUser(
                 $user,
                 $authenticator,
@@ -46,8 +53,8 @@ class RegistrationController extends AbstractController
         }
 
         return $this->render('registration/register.html.twig', [
-            'form' => $form,
             'registrationForm' => $form->createView(),
+            
         ]);
     }
 }

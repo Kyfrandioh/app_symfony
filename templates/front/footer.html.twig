@@ -4,22 +4,93 @@
         {% for openingHour in openingHours %}
         <p class="text-center">
             {{ openingHour.day }} :
-            {% if (openingHour.noonOpeningHour is null) and  (openingHour.noonClosingHour is null) 
-            and (openingHour.eveningOpeningHour is null) and  (openingHour.eveningClosingHour is null) %}
-            Fermé
-            {% endif %}
-            {% if (openingHour.noonOpeningHour is not null) %}
+           
+            {% if (openingHour.noonOpeningHour is not null ) %}
                 {{ openingHour.noonOpeningHour }}H00 -
             {% endif %}
-            {% if (openingHour.noonClosingHour is not null) %}
-                {{ openingHour.noonClosingHour }}H00
+
+             {% if (openingHour.noonClosingHour is not null ) %}
+                {{ openingHour.noonClosingHour }}H00 
             {% endif %}
-            {% if (openingHour.eveningOpeningHour is not null) %}
+
+            {% if (openingHour.eveningOpeningHour is not null ) %}
                 {{ openingHour.eveningOpeningHour }}H00 -
             {% endif %}
-            {% if (openingHour.eveningClosingHour is not null) %}
+
+            {% if (openingHour.eveningClosingHour is not null ) %}
                 {{ openingHour.eveningClosingHour }}H00
             {% endif %}
+
+             {% if (openingHour.noonOpeningHour is null) and  (openingHour.noonClosingHour is null) 
+            and (openingHour.eveningOpeningHour is null) and  (openingHour.eveningClosingHour is null) %}Fermé
+            {% endif %}
         </p>
-    {% endfor %}
+        {% endfor %}
+
+
+        <section class="footer">
+     <div class="container-fluid">
+       <div class="row">
+       <footer class="bg-dark text-white pt-5 pb-4">
+          <div class="container text-center text-md-left">
+             <div class="row text-center text-md-left">
+                
+
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                      <h5 class="text-uppercas mb-4 font-weigth-bold text wraning">Contact</h5>
+                        <p>
+                          <i class="fas fa-house mr-3"></i> 29420, plouvor, France
+                        </p>
+                        <p>
+                          <i class="fas fa-envelope mr-3"></i> resto24@gmail.com
+                        </p>
+                        <p>
+                          <i class="fas fa-phone mr-3"></i> +330612017496
+                        </p>
+                        <p>
+                          <i class="fas fa-print mr-3"></i> +331247538720
+                       </p>
+                   </div>
+
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                      <h5 class="text-uppercas mb-4 font-weigth-bold text wraning">A propos de Nous</h5>
+                      <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic quam perferendis natus 
+                     esse nihil numquam rerum quis velit a nam porro at voluptatibus debitis expedita omnis,
+                      ad necessitatibus! Aut, optio.</p>
+                    </div>
+
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                       <h5 class="text-uppercas mb-4 font-weigth-bold text wraning">L'actualité du restaurant</h5>
+                       <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic quam perferendis natus 
+                     esse nihil numquam rerum quis velit a nam porro at voluptatibus debitis expedita omnis,
+                      ad necessitatibus! Aut, optio.</p>
+                    </div>
+               </div>
+                    <hr class="mb-4">
+                    <div class="row align-items-center">
+                       <div class="col-md-7 col-lg-8">
+                          <p>Copyright ©2023 All rights reserved by: Frank</p>
+                       </div>
+
+                       <div class="col-md-5 col-lg-4">
+                       <div class="text-center text-md right">
+                         
+                         <ul class="list-unstyled list-inline">
+                           <li class="list-inline-item">
+                             <a href="#" class"btn-floating btn-sm text-white" style="font-size: 23px">
+                             <i class="fab fa-facebook"></i></a>
+                           </li>
+
+                           <li class="list-inline-item">
+                             <a href="#" class"btn-floating btn-sm text-white" style="font-size: 23px">
+                             <i class="fab fa-twitter"></i></a>
+                           </li>
+                        </ul>
+                     </div>
+               </div>
+           </div>
+      </footer>
+     </div>
     </div>
+   </section>
+ </div>

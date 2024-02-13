@@ -21,15 +21,7 @@ class ReservationController extends AbstractController
     {
 
         $reservation = new Reservation();
-        $user = $this->getUser();
-        if($user) {
-            $reservation
-                ->setGuestEmail($this->getUser()->getEMail())
-                ->setFirstName($this->getUser()->getFirstName())
-                ->setLastName($this->getUser()->getLastName())
-                ->setGuestNumber($this->getUser()->getGuestNumber());
-        }
-
+       
         
         $form = $this->createForm(ReservationType::class, $reservation);
         $form->handleRequest($request);
@@ -57,9 +49,10 @@ class ReservationController extends AbstractController
      /**
      * @throws Exception
      */
-    #[Route('/reservation/date', name: 'app_reservation_hours')]
-    public function hours(Request $request, EntityManagerInterface $entityManager): Response
-    {
+        #[Route('/reservation/date', name: 'app_reservation_hours')]
+       public function hours(Request $request, EntityManagerInterface $entityManager): Response
+        {
+       
         $date = $request->query->get('date');
         $selectedDate = new \DateTime($date);
         $formatter = new \IntlDateFormatter('fr_FR', \IntlDateFormatter::LONG, \IntlDateFormatter::NONE);
