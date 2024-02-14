@@ -18,9 +18,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{ path('app_login') }}">Se connecter</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ path('app_register') }}">S'inscrire</a>
-                    </li>
+                    
                 {% endif %}
             </ul>
             {% if app.user and not is_granted('ROLE_ADMIN') %}
@@ -38,7 +36,7 @@
         {% if app.user %}
             <a type="button" class="btn btn-outline-primary m-2" href="{{ path('app_logout') }}">Se déconnecter</a>
         {% endif %}
-        <a type="button" class="btn btn-warning btn-lg" href="{{ path('app_reservation') }}">Réserver</a>
+        <a type="button" class="btn btn-warning btn-lg" href="{{ path('app_register') }}">S'inscrire</a>
     </div>
 </nav>
        
