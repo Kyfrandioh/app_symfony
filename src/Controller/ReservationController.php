@@ -21,7 +21,6 @@ class ReservationController extends AbstractController
     {
 
         $reservation = new Reservation();
-       
         
         $form = $this->createForm(ReservationType::class, $reservation);
         $form->handleRequest($request);
@@ -46,9 +45,11 @@ class ReservationController extends AbstractController
 
         }
 
-     /**
+     
+       /**
      * @throws Exception
      */
+     
         #[Route('/reservation/date', name: 'app_reservation_hours')]
        public function hours(Request $request, EntityManagerInterface $entityManager): Response
         {

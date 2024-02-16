@@ -44,7 +44,7 @@
 
 {% endblock %}
 {% block javascripts %}
-  <script src="{{ ('scripts/openingHours.js') }}"><script> 
-  <script src="{{ ('scripts/reservation.js') }}"><script> 
+    {{ encore_entry_script_tags('openingHours') }}
+    {{ encore_entry_script_tags('reservation') }}
      
 {% endblock %}
