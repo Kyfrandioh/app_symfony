@@ -43,8 +43,11 @@
     </div>
 
 {% endblock %}
-{% block javascripts %}
-    {{ encore_entry_script_tags('openingHours') }}
-    {{ encore_entry_script_tags('reservation') }}
-     
+ 
+ 
+   {% block javascripts %}
+    <script src="{{ asset('assets/js/openingHours.js') }}"></script>
+    <script src="{{ asset('assets/js/reservation.js') }}"></script>
 {% endblock %}
+
+   

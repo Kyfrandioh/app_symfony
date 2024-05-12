@@ -11,9 +11,9 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Security\Http\Attribute\IsGranted as AttributeIsGranted;
 
-
-
+#[AttributeIsGranted('ROLE_USER')]
 class EditUserController extends AbstractController
 {
     #[Route('/editUser', name: 'app_edit_user', methods: ['POST', 'GET'])]
