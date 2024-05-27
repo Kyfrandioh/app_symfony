@@ -22,6 +22,7 @@
     "dependencies": {
         "bootstrap": "^5.2.3",
         "jquery": "^3.7.1",
+        "maildev": "^2.1.0",
         "sass": "^1.62.1",
         "sass-loader": "^13.2.2"
     }
